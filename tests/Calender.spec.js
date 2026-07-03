@@ -13,6 +13,7 @@ test('Calender Validation', async ({page})=>{
     await page.locator("//abbr[text()='"+date+"']").click();
     const inputs=await page.locator(".react-date-picker__inputGroup__input");
     const count =await inputs.count();
+    //Calender changes made in the branch 
     console.log(count);
     for(let i=0; i<count; ++i){
         const text=await inputs.nth(i).inputValue();
